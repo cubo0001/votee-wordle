@@ -61,9 +61,10 @@ const KeyboardComponent = ({ rows, columns, boardItems, setBoardItems, stateGame
     } else if (inputKey === 'AutoGuess') {
       guesser.guess({ boardItems, rows, columns, stateGame }, callApi)
     } else {
-      const newInput = input + inputKey
+      const newInput = inputKey === '{bksp}' ? input.slice(0, -1) : input + inputKey
       const chunkArr = chunk(newInput, 5)
-      let newBoardItems = !wordToGuess && ([...boardItems]).reduce((initItem, currentItem, index) => {
+      
+      let newBoardItems = (!wordToGuess || inputKey === '{bksp}') && ([...boardItems]).reduce((initItem, currentItem, index) => {
         if (currentRow === index && chunkArr[index]) {
           const newArr = [...Array(5)].map((item, indexArr) => {
             const itemArr = [...chunkArr[index]][indexArr] ? { [[...chunkArr[index]][indexArr]]: 'waiting' } : item
@@ -74,9 +75,13 @@ const KeyboardComponent = ({ rows, columns, boardItems, setBoardItems, stateGame
         return [...initItem, currentItem]
       }, [])
 
-      if (chunkArr[chunkArr.length - 1].length === 5) setWordToGuess(chunkArr[chunkArr.length - 1])
+      if (chunkArr[chunkArr.length - 1].length === 5) {
+        setWordToGuess(chunkArr[chunkArr.length - 1])
+      } else {
+        setWordToGuess('')
+      }
       allowTyping && newBoardItems && setBoardItems([...newBoardItems])
-      allowTyping && !wordToGuess && setInput(newInput)
+      allowTyping && (!wordToGuess || inputKey === '{bksp}') && setInput(newInput)
     }
   };
 
