@@ -1,0 +1,360 @@
+html {
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0rem;
+}
+
+ul {
+    color: black;
+    list-style-type: disc;
+    padding-left: 0px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    padding-top: 1rem;
+}
+
+.container {
+    max-width: 1344px;
+    padding: 5px !important;
+}
+
+table {
+    padding-left: 0 !important;
+}
+
+th tr td {
+    text-align: center;
+}
+
+input {
+    text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    text-transform: none;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    text-transform: none;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    text-transform: none;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    text-transform: none;
+}
+
+::placeholder {
+    /* Recent browsers */
+    text-transform: none;
+}
+
+.row {
+    margin-left: 0px;
+}
+
+.grid-striped .row:nth-of-type(odd) {
+    background-color: #d9e7ff;
+}
+
+.wificode-header {
+    max-width: 700px;
+}
+
+.card-header {
+    min-height: 5rem;
+}
+/* 
+.card-deck .card {
+    min-width: 12rem;
+    max-width: 12rem;
+} */
+
+.wifiCard {
+    height: 80px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-deck .card {
+    /* min-width: 8rem; */
+    /* max-width: 8rem; */
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.starter-template {
+    padding-right: 1.5rem;
+    padding-bottom: 3rem;
+    padding-left: 1.5rem;
+    text-align: center;
+}
+
+.form {
+    text-align: left;
+}
+
+.sqcolor {
+    background-color: #00276c;
+}
+
+.custom-control-input.is-valid ~ .custom-control-label,
+.was-validated .custom-control-input:valid ~ .custom-control-label {
+    color: #000000;
+}
+
+.custom-control-input.is-valid:checked ~ .custom-control-label::before,
+.was-validated
+    .custom-control-input:valid:checked
+    ~ .custom-control-label::before {
+    border-color: #007bff;
+    background-color: #007bff;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #007bff;
+    background-color: #007bff;
+}
+
+.btn-primary:disabled {
+    background-color: #656a80 !important;
+}
+
+.wifiButton {
+    height: inherit;
+    background-color: #353a40;
+    border-radius: 0.3rem;
+}
+
+.wifiButtonDisabled {
+    height: inherit;
+    background-color: #656a80;
+}
+
+.soasbb {
+    background-color: #fea500;
+}
+
+.soagx {
+    background-color: #076807;
+}
+
+.pac {
+    background-color: #0e71b5;
+}
+
+.fleetinfo {
+    padding: 10px !important;
+    height: 100%;
+    font-size: 4em;
+}
+
+.focwifiinfomodal {
+    height: 700px;
+}
+.fleetinfomodal{
+    min-height: 700px;
+}
+
+.allButton {
+    margin-left: 5px;
+}
+
+.blankCard {
+    height: 80px;
+    border: 0px;
+}
+
+.fa-plane-departure,
+.fa-wifi {
+    color: orange;
+}
+
+.productTitle {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.fleetcard {
+    min-width: 60px;
+    max-width: 60px;
+    margin-bottom: 0.5rem !important;
+    border-radius: 0.25rem !important;
+}
+
+.fleetcard-header {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.2rem;
+    min-height: 0rem;
+}
+
+.fleetcard-body {
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0.1rem;
+    min-height: 0rem;
+}
+
+.fleetcard-footer {
+    padding: 0.2rem;
+    font-size: 10px;
+}
+
+.fleetcard-group {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.modalmessage {
+    margin-bottom: 0.5rem;
+}
+
+.inflight-table-complimentarywifiallowance {
+    border-collapse: collapse;
+    border-style: outset;
+    width: 100%;
+    max-width: 447px;
+}
+
+.inflight-table-paid-wifi {
+    border-collapse: collapse;
+    width: 303.5px;
+    border-style: outset;
+}
+
+.bgblack {
+    background-color: #000000;
+}
+
+.bggrey {
+    background-color: #ced4d9;
+}
+
+.black {
+    color: #000000;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.center {
+    text-align: center;
+}
+
+.aligntop {
+    vertical-align: top;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.btn-info, .btn-info:hover, .btn-info:focus{
+    color: #fff;
+}
+.btn-block{
+    display: block;
+    width: 100%;
+}
+.font-weight-bolder{
+    font-weight: bolder !important;
+}
+
+.card-deck{
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.alert.alert-info, .alert.alert-danger{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    margin-bottom: 0;
+}
+.aircraft-button{
+    cursor: auto;
+    font-size: 0.95rem
+}
+
+.bg-dark{
+    background-color: #343a40!important;
+}
+#fleetinfo, #wififoc{
+    border-radius: 0.25rem;
+}
+
+.container-fluid{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.border-dark{
+    border-color: #343a40 !important;
+}
+
+.card-deck .card-layout{
+    width: 1180px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 9rem);
+    /* grid-template-columns: repeat(auto-fit, 9rem); */
+    justify-content: center;
+    grid-column-gap: 20px;
+}
+.fleetinfomodal .btn-group{
+    flex-flow: row wrap;
+}
+
+@media (min-width: 576px) {
+    .card-deck{
+        flex-flow: row wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-deck .card-layout{
+        width: 100%;
+    }
+
+}

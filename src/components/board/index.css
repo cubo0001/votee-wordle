@@ -1,0 +1,14 @@
+.row {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #0c8d7eb5;
+    padding: 10px;
+    gap: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  margin: 0 auto;
+}
