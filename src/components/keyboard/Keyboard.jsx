@@ -3,6 +3,7 @@ import wordleApi from "../../api/wordleApi";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import "./index.css";
+import chunk from "../../utilties/chunk"
 import guesser from "../../guesser"
 
 const KeyboardComponent = ({ rows, columns, boardItems, setBoardItems, stateGame, setStateGame }) => {
@@ -13,15 +14,6 @@ const KeyboardComponent = ({ rows, columns, boardItems, setBoardItems, stateGame
   const keyboard = useRef()
   // Returns a random integer from 1 to 5000:
   const seed = Math.floor(Math.random() * 5000) + 1
-
-  const chunk = (array, chunkSize) => {
-    let arr = []
-    for (let i = 0; i < array.length; i += chunkSize) {
-      const chunk = array.slice(i, i + chunkSize)
-      arr = [...arr, chunk]
-    }
-    return arr
-  }
 
   const callApi = (wordToGuess, autoGuess = false, currentRowAuto = 0) => {
     let currentRowExecute = currentRow
